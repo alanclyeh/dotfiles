@@ -1,0 +1,104 @@
+" -----------------------------------------------------------------------------
+"  .vimrc : VIM config file
+"  vim: set filetype=vim
+"  Author: Alan Yeh
+" -----------------------------------------------------------------------------
+
+" Show line number
+set nu
+
+" ident options 
+set cindent
+set cinoptions=>4
+set shiftwidth=4
+set tabstop=4
+set autoindent
+set smartindent
+set expandtab
+set showcmd
+set wildmenu
+set showmatch
+set nocompatible
+
+" Enable search highlight
+set hlsearch
+
+filetype on
+syntax on
+
+set fileencodings=utf-8
+set termencoding=utf-8
+set enc=utf-8
+set tenc=utf8
+
+" Configuration for Taglist
+let Tlist_Ctags_Cmd="/usr/bin/ctags"
+let Tlist_Inc_Winwidth=0
+let Tlist_GainFocus_On_ToggleOpen=1
+
+
+" statusline: buf: filename mode [type] ... position [ASCII:HEX] % of file
+set ls=2
+set statusline=%<%02n:\ %f\ %m%r\ %y%=%l,%c%V\ of\ %L\ [%03.3b:0x%02.2B]\ %P
+highlight StatusLine ctermfg=blue ctermbg=white
+
+
+" Setting cscope 
+"if has("cscope")    
+"    set csprg=/usr/bin/cscope
+"    set csto=0
+"    set cst
+"    set nocsverb
+
+    " and any database in current directory
+"    if filereadable("cscope.out")
+"        cs add cscope.out
+"    elseif
+        " else add database pointed to by  enviroment
+"        $CSCOPE_DB != ""
+"{        cs add $CSCOPE_DB
+"    endif
+
+"   set csverb
+"    set cscopetag
+"    set cscopequickfix=s-,g-,c-,d-,t-,e-,f-,i-
+"endif
+
+
+" Set source code formatter 
+set equalprg=/usr/bin/astyle
+
+
+
+
+" Defines of HotKeys
+nnoremap <F3> :bp<CR>
+nnoremap <F4> :bn<CR>
+
+nnoremap <F5> gg=G <C-O><C-O><CR>
+"Prev error:  nnoremap <F6> :cp<CR> 
+"Next error:  nnoremap <F7> :cn<CR>
+nnoremap <F6> :bp<CR>
+nnoremap <F7> :bn<CR>
+nnoremap <F8> :Tlist<CR>
+nnoremap <F9> :make<CR>
+nnoremap <F10> <C-W>w
+
+
+" Horizontal mark line
+set cursorline 
+autocmd InsertLeave * hi clear 
+autocmd InsertEnter * hi cursorline term=none cterm=none ctermbg=0
+
+" Back to last edit position 
+if has("autocmd")
+    autocmd BufRead *.txt set tw=78
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal g'\"" |
+    \ endif
+endif
+
+
+" Set to support 256 color 
+colorscheme desert256

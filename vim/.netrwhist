@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/alan/works/ecos/sq-ecos.git/sdk/intclib/eCos'
+let g:netrw_dirhist_2='/home/alan/works/ecos/sq-ecos.git/sdk/intclib/SRC'
+let g:netrw_dirhist_3='/home/alan/works/diagnostic/SQ32C8006_Diagnostic/src/PWM'
