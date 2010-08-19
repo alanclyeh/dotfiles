@@ -104,4 +104,4 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibu
 export QT_IM_MODULE=ibus
 
-export PATH=/home/alan/works/gnutools/arm-eabi/bin:/home/alan/works/ecos/ecos/ecos-3.0/tools/bin:/home/alan/works/gnutools/arm-2010q1/bin:$PATH
+export PATH=/home/alan/works/gnutools/arm-eabi/bin:/home/alan/works/ecos/ecos/ecos-3.0/tools/bin:/home/alan/works/gnutools/arm-2010q1/bin:/home/alan/works/my-dotfiles.git/git:$PATH
