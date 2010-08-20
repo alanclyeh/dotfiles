@@ -1,0 +1,17 @@
+[user]
+	name = Alan Yeh
+	email = alanyeh@sq.com.tw
+[color]
+	branch = auto
+	status = auto
+	diff = auto
+[core]
+	editor = vi
+[alias]
+	st = status
+	ci = commit
+	ca = commit -a
+	br = branch
+	co = checkout
+[diff]
+	external = ~/works/my-dotfiles.git/git/git-meld.sh
