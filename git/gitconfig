@@ -1,6 +1,6 @@
 [user]
-	name = Alan Yeh
-	email = alanyeh@sq.com.tw
+	name = bFish 
+	email = blowfihsyeh@gmail.com 
 [color]
 	branch = auto
 	status = auto
@@ -14,4 +14,4 @@
 	br = branch
 	co = checkout
 [diff]
-	external = ~/works/my-dotfiles.git/git/git-meld.sh
+	external = ~/my-dotfiles.git/git/git-meld.sh
