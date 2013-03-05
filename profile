@@ -1,7 +1,7 @@
-export TERM=xterm-color
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-export LANG=en-us.UTF8
+#export TERM=xterm-color
+#export CLICOLOR=1
+#export LSCOLORS=ExFxCxDxBxegedabagacad
+#export LANG=en-us.UTF8
 
 ##
 # Your previous /Users/alan.yeh/.profile file was backed up as /Users/alan.yeh/.profile.macports-saved_2011-05-14_at_22:05:28
@@ -42,7 +42,7 @@ parse_git_branch() {
 export PS1='\[\e[1;32m\]\h\[\e[1;37m\]:\[\e[1;36m\]\w\[\e[1;33m\]$(parse_git_branch)\[\e[0m\]$ '
 
 
-export LC_ALL=C
+#export LC_ALL=C
 
 
 # enable color support of ls and also add handy aliases
@@ -58,5 +58,5 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -lF'
 alias la='ls -A'
