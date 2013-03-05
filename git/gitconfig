@@ -13,5 +13,4 @@
 	ca = commit -a
 	br = branch
 	co = checkout
-[diff]
-	external = ~/my-dotfiles.git/git/git-meld.sh
+    lp = log --graph --pretty=format:'%C(red)%h%Creset - %C(yellow)%d%Creset %s %C(green)<%an> %Creset' --branches --abbrev-commit
