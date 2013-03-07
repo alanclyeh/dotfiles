@@ -1,3 +1,8 @@
 - Add a script file to sync and copy dotfiles to current enviroment
 - Add a script to config git alias and color automaticlly
-- 
+- Reorigianize files
+- Move custome bash configuration from .bashrc to .bash_profile
+- Add more VIM plugins for coding
+
+
+
