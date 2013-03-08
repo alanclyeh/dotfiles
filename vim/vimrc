@@ -38,7 +38,7 @@ highlight StatusLine ctermfg=blue ctermbg=white
 
 
 " set color scheme
-colorscheme desert256
+"colorscheme desert256
 
  
 " Back to last edit position 
