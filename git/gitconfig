@@ -14,3 +14,8 @@
 	br = branch
 	co = checkout
     lp = log --graph --pretty=format:'%C(red)%h%Creset - %C(yellow)%d%Creset %s %C(green)<%an> %Creset' --branches --abbrev-commit
+
+    uncommit = reset --soft HEAD^
+    who = shortlog -n -s --no-merges
+    amend = commit --amend
+
