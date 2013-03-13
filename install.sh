@@ -33,3 +33,16 @@ cp -af vim/plugin $HOME/.vim
 cp -af vim/colors $HOME/.vim
 echo -ne "\t[OK]\n"
 
+
+#
+# Force user setting user name and email.
+#
+read -p "Please input your name for git: " git_user_name
+read -p "Please input your email for git: " git_user_email
+echo -ne "\n"
+
+printf "%-50s" "Config user information for git..."
+git config --global user.name "${git_user_name}"
+git config --global user.email "${git_user_email}"
+echo -ne "[OK]\n"
+
