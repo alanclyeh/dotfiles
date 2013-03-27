@@ -65,9 +65,11 @@ nnoremap <F4> :bn<CR>
 
 nnoremap <F5> gg=G <C-O><C-O><CR>
 "F6 previos error
-nnoremap <F6> :cp<CR>    
+"nnoremap <F6> :cp<CR>    
 "F7 Next error:  
-nnoremap <F7> :cn<CR>
-nnoremap <F8> :TlistToggle <CR>
+"nnoremap <F7> :cn<CR>
+nnoremap <F6> :TrinityToggleAll<CR>    
+nnoremap <F7> :TrinityToggleSourceExplorer<CR>
+nnoremap <F8> :TrinityToggleTagList<CR>
 nnoremap <F9> :make<CR>
 
