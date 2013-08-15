@@ -129,8 +129,4 @@ export EDITOR="vim"
 export VISUAL="vim"
 
 
-# NTP date
-nptdate -s tock.stdtime.gov.tw &
-
-
 
