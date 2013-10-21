@@ -18,7 +18,6 @@ function cp_to_home {
 sudo apt-get -y install git gitg vim astyle exuberant-ctags
 
 
-
 #
 # Copy doc files to home directory.
 #
@@ -41,15 +40,24 @@ echo -ne "\t[OK]\n"
 
 
 #
-# Force user setting user name and email.
+# Configure user name and email for git.
 #
-read -p "Please input your name for git: " git_user_name
-read -p "Please input your email for git: " git_user_email
-echo -ne "\n"
+GIT_NAME=`git config --get user.name`
+GIT_EMAIL=`git config --get user.email`
+
+printf "%-50s" "Config user information for git..."
+echo
+# NOTE: Below checking is invalid, due to the script alwasy overwrite 
+# ~/.gitconfig first.
+if [ -z "$GIT_NAME" ]; then
+    read -p ">> Please input your name for git: " git_user_name
+    git config --global user.name "${git_user_name}"
+fi
+if [ -z "$GIT_EMAIL" ]; then
+    read -p ">> Please input your email for git: " git_user_email
+    git config --global user.email "${git_user_email}"
+fi
 
 # TODO: input only globa user.name and user.email not configed.
-printf "%-50s" "Config user information for git..."
-git config --global user.name "${git_user_name}"
-git config --global user.email "${git_user_email}"
 echo -ne "[OK]\n"
 
