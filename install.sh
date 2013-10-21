@@ -12,6 +12,12 @@ function cp_to_home {
     cp ${src_file} ${dest_file}
 }
 
+#
+# Install required and suggested packages
+#
+sudo apt-get -y install git gitg vim astyle exuberant-ctags
+
+
 
 #
 # Copy doc files to home directory.
@@ -41,6 +47,7 @@ read -p "Please input your name for git: " git_user_name
 read -p "Please input your email for git: " git_user_email
 echo -ne "\n"
 
+# TODO: input only globa user.name and user.email not configed.
 printf "%-50s" "Config user information for git..."
 git config --global user.name "${git_user_name}"
 git config --global user.email "${git_user_email}"
